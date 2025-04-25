@@ -1,57 +1,68 @@
-.App {
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* Reset và đảm bảo body chiếm toàn bộ chiều cao màn hình */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
   font-family: Arial, sans-serif;
-}
-
-.navbar {
-  border-bottom: 2px solid #003087; /* Viền xanh đậm giống trong ảnh */
-  padding: 1rem 0;
-}
-
-.logo-img {
-  height: 80px; /* Kích thước logo giống trong ảnh */
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  color: #003087;
-}
-
-.nav-link {
-  font-weight: 500;
-  color: #333;
-}
-
-.nav-link:hover {
-  color: #007bff;
-}
-
-.banner {
   background-color: #f8f9fa;
-  padding: 3rem 0;
 }
 
-.features .card {
-  transition: transform 0.2s;
-}
-
-.features .card:hover {
-  transform: translateY(-5px);
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Đảm bảo #root chiếm toàn bộ chiều cao màn hình */
 }
 
 footer {
-  background-color: #003087; /* Màu xanh đậm giống trong ảnh */
-  color: #fff;
-}
-
-footer a {
-  color: #fff;
-}
-
-footer a:hover {
-  color: #ccc;
-  text-decoration: underline;
-}
-
-footer .social-links a {
-  margin-right: 1rem;
+  margin-top: auto; /* Đảm bảo footer luôn ở dưới cùng khi nội dung ít */
 }
