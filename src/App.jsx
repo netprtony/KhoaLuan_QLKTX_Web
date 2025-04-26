@@ -29,17 +29,16 @@ function App() {
           {/* Route cho trang đăng ký */}
           <Route path="/quanly/register" element={<Register />} />
         </Routes>
-        
+        <div className="bg-gray-50 min-h-screen">
+          <HopDongNoiTru />
+          <PhieuThuTienPhong />
+        </div>
+        <DanhSachPhong />
+        <PhieuThu />
+        <ChiTietPhieuThuBang />  
         {/* Footer luôn hiển thị ở cuối */}
         <Footer />
       </Router>
-      <DanhSachPhong />
-      <PhieuThu />
-      <ChiTietPhieuThuBang />     
-      <div className="bg-gray-50 min-h-screen">
-      <HopDongNoiTru />
-      <PhieuThuTienPhong />
-    </div>
     </div>
   );
 }

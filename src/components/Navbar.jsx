@@ -7,7 +7,7 @@ const Navbar = () => {
       {/* Logo and School Name */}
       <div className="d-flex align-items-center">
         <a className="navbar-brand" href="/">
-          <img src="https://huit.edu.vn/Images/Documents/N00CT/logo-huit-web-chinh-moi-mau-xanh-02.svg?h=80" alt="Logo HUIT" className="logo-img" />
+          <img src="logo-huit.svg" alt="Logo HUIT" className="logo-img" style={{ height: "80px"}} />
         </a>
       </div>
       {/* Right Section: Ministry and School Name */}
