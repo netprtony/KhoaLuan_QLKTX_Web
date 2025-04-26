@@ -9,6 +9,7 @@ import PhieuThu from "./ThanhToan/PhieuThu";
 import HopDongNoiTru from "./NoiTru/HopDongNoiTru";
 import ChiTietPhieuThuBang from "./ThanhToan/ChiTietPhieuThuBang";  
 import PhieuThuTienPhong from "./components/PhieuThuTienPhong";
+import Login from "./components/login";
 
 function App() {
   return (
@@ -30,12 +31,13 @@ function App() {
           <Route path="/quanly/register" element={<Register />} />
         </Routes>
         <div className="bg-gray-50 min-h-screen">
+          <Login />
           <HopDongNoiTru />
           <PhieuThuTienPhong />
-        </div>
-        <DanhSachPhong />
-        <PhieuThu />
-        <ChiTietPhieuThuBang />  
+          </div>
+          <DanhSachPhong />
+          <PhieuThu />
+          <ChiTietPhieuThuBang />  
         {/* Footer luôn hiển thị ở cuối */}
         <Footer />
       </Router>

@@ -1,22 +1,27 @@
 import React from "react";
+import './App.css';
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-light bg-white border-bottom border-primary">
-    <div className="container">
-      {/* Logo and School Name */}
-      <div className="d-flex align-items-center">
-        <a className="navbar-brand" href="/">
-          <img src="logo-huit.svg" alt="Logo HUIT" className="logo-img" style={{ height: "80px"}} />
-        </a>
+    <nav className="navbar w-100" style={{ backgroundColor: "#005ab7" }}>
+      <div className="container-fluid">
+        <div className="d-flex justify-content-center align-items-center w-100">
+          <a className="navbar-brand m-0">
+            <div
+              className="logo-container"
+              
+            >
+              <img
+                src="logo-navbar.png"
+                alt="Logo HUIT"
+                className="logo-img"
+                style={{ height: "80px" }}
+              />
+            </div>
+          </a>
+        </div>
       </div>
-      {/* Right Section: Ministry and School Name */}
-      <div className="text-center">
-        <p className="mb-0 text-primary fw-bold">BỘ CÔNG THƯƠNG</p>
-        <p className="mb-0 text-primary">TRƯỜNG ĐẠI HỌC CÔNG THƯƠNG TP. HỒ CHÍ MINH</p>
-      </div>
-    </div>
-  </nav>
+    </nav>
   );
 };
 
