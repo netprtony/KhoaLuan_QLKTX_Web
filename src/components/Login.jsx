@@ -1,87 +1,59 @@
+import React from 'react';
 
-import React from "react";
-import FeatureCard from "./FeatureCard";
-const Login = () => {
-    return (
-      <>
-       
-  
-        <section className="login-form py-5 bg-light">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-md-6 col-lg-4">
-                <div className="card p-4 shadow-sm">
-                  <h3 className="text-center mb-4">CỔNG THÔNG TIN SINH VIÊN</h3>
-                  <h5 className="text-center mb-4 text-muted">ĐĂNG NHẬP HỆ THỐNG</h5>
-                  <div className="mb-3">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Nhập mã sinh viên"
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <input
-                      type="password"
-                      className="form-control"
-                      placeholder="Nhập mật khẩu"
-                    />
-                  </div>
-                  <div className="mb-3 form-check">
-                    <input
-                      type="checkbox"
-                      className="form-check-input"
-                      id="graduated"
-                    />
-                    <label className="form-check-label" htmlFor="graduated">
-                      Đã tốt nghiệp
-                    </label>
-                  </div>
-                  <div className="mb-3 d-flex align-items-center">
-                    <input
-                      type="text"
-                      className="form-control me-2"
-                      placeholder="Nhập mã"
-                      disabled
-                    />
-                    <button className="btn btn-outline-secondary">
-                      <i className="bi bi-arrow-repeat"></i>
-                    </button>
-                  </div>
-                  <button className="btn btn-warning w-100 mb-3">ĐĂNG NHẬP</button>
-                  <p className="text-center text-muted mb-3">
-                    <small>Dành cho phụ huynh</small>
-                  </p>
-                  <p className="text-center mb-3">
-                    Tải App Mobile sinh viên:
-                  </p>
-                  <div className="d-flex justify-content-center mb-3">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/8/82/QR_code_icon.svg"
-                      alt="QR Code"
-                      style={{ width: "50px", marginRight: "10px" }}
-                    />
-                    <img
-                      src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
-                      alt="App Store"
-                      style={{ width: "120px", marginRight: "10px" }}
-                    />
-                    <img
-                      src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                      alt="Google Play"
-                      style={{ width: "135px" }}
-                    />
-                  </div>
-                  <button className="btn btn-outline-info w-100">
-                    Hướng dẫn sử dụng App OneUni
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </>
-    );
-  };
+const LoginSection = () => {
+  return (
+    <div className="login-section">
+      <h1>CỔNG KÝ TÚC XÁ SINH VIÊN</h1>
+      <h2>ĐĂNG NHẬP HỆ THỐNG</h2>
+      <div className="form-group">
+        <input type="text" placeholder="Nhập mã sinh viên" required />
+      </div>
+      <div className="form-group">
+        <input type="password" placeholder="Nhập mật khẩu" required />
+      </div>
+      <div className="captcha">
+        <label>
+          <input type="checkbox" /> Đã tốt nghiệp
+        </label>
+        <div>
+          <span>Nhập mã</span>
+          <img src="GetCaptcha.jfif" alt="Captcha" />
+          <button>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9H0m0 0v5h5.582M20 20v-5h-.582m-15.356-2A8.001 8.001 0 0019.418 15H24m0 0v-5h-5.582"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div className="form-group">
+        <input type="text" placeholder="" />
+      </div>
+      <button className="login-btn">ĐĂNG NHẬP</button>
+      <a href="#">Dành cho phụ huynh</a>
+      <div className="app-links">
+        <p>Tải App Mobile sinh viên:</p>
+        <img src="img_qr_oneuni.png" alt="QR Code" />
+        <img
+          src="store_appstore.svg"
+          alt="App Store"
+        />
+        <img
+          src="google_play.svg"
+          alt="Google Play"
+        />
+      </div>
+      <button className="guide-btn">Hướng dẫn sử dụng App OneUni</button>
+    </div>
+  );
+};
 
-export default Login;
+export default LoginSection;

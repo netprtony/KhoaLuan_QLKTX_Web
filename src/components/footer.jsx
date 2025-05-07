@@ -1,5 +1,5 @@
 import React from "react";
-import './App.css';
+import '/src/assets/style/style.css';
 const Footer = () => {
   return (
     <footer className="bg-primary text-white py-4">

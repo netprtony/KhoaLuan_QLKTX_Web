@@ -10,36 +10,23 @@ import HopDongNoiTru from "./NoiTru/HopDongNoiTru";
 import ChiTietPhieuThuBang from "./ThanhToan/ChiTietPhieuThuBang";  
 import PhieuThuTienPhong from "./components/PhieuThuTienPhong";
 import Login from "./components/login";
-
+import Notifications from "./components/notifications";
+import "./App.css"
 function App() {
   return (
     <div className="App">
       <Router>
         {/* Navbar luôn hiển thị */}
         <Navbar />
-        
+       
         {/* Các routes để render các component theo yêu cầu */}
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Banner />
-              <Features />
-            </>
-          } />
-          
-          {/* Route cho trang đăng ký */}
-          <Route path="/quanly/register" element={<Register />} />
-        </Routes>
-        <div className="bg-gray-50 min-h-screen">
+        <div className="container">
+         
+          <Notifications />
           <Login />
-          <HopDongNoiTru />
-          <PhieuThuTienPhong />
-          </div>
-          <DanhSachPhong />
-          <PhieuThu />
-          <ChiTietPhieuThuBang />  
+        </div>
         {/* Footer luôn hiển thị ở cuối */}
-        <Footer />
+    
       </Router>
     </div>
   );

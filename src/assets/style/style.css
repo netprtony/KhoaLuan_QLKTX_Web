@@ -1,0 +1,154 @@
+
+  
+  .logo-img {
+    height: 80px;
+  }
+  
+
+  
+  footer {
+    margin-top: auto; /* Đảm bảo footer luôn ở dưới cùng khi nội dung ít */
+  }
+  
+
+  .container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    gap: 20px;
+  }
+  .notifications {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+
+  }
+  
+  .notification-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-left: 4px solid #005ab7;
+    border-radius: 18px;
+    box-shadow:2px 4px 12px #00000014
+  }
+  
+  .notification-item.red {
+    border-left-color: #dc3545;
+  }
+  
+  .login-section {
+    width: 55%;
+    padding: 20px;
+    background-color: #e9ecef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 18px;
+    box-shadow:2px 4px 12px #00000014
+  }
+  
+  .login-section h1 {
+    color: #005ab7;
+    font-size: 24px;
+    margin-bottom: 5px;
+    
+  }
+  
+  .login-section h2 {
+    color: #005ab7;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .captcha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .captcha img {
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .captcha button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #005ab7;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6200;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .login-btn:hover {
+    background-color: #e65c00;
+  }
+  
+  .app-links {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .app-links p {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .app-links img {
+    height: 50px;
+    margin: 0 10px;
+  }
+  
+  .guide-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00c4cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .guide-btn:hover {
+    background-color: #00b0b7;
+  }
+  
+  a {
+    color: #005ab7;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
