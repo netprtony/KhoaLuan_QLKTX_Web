@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom'; // Thêm Link và useNavigate
 import '/src/assets/style/Navbar_Home.css';
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate(); // Để xử lý đăng xuất
 
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
+  };
+
+  const handleLogout = () => {
+    // Xử lý đăng xuất (ví dụ: xóa token, state, v.v.)
+    navigate('/'); // Chuyển hướng về trang đăng nhập sau khi đăng xuất
   };
 
   return (
@@ -24,18 +31,18 @@ const Navbar = () => {
         </div>
       </div>
       <ul className="nav-links">
-        <li><a href="#">Đăng Kí</a></li>
-        <li><a href="#">Nhận Phòng</a></li>
-        <li><a href="#">Đặt Chỗ</a></li>
-        <li><a href="#">Gia Hạn</a></li>
-        <li><a href="#">Trả Phòng</a></li>
-        <li><a href="#">Thanh Toán</a></li>
-        <li><a href="#">Hỗ Trợ</a></li>
+        <li><Link to="/home">Đăng Kí</Link></li>
+        <li><Link to="/home">Nhận Phòng</Link></li>
+        <li><Link to="/home">Đặt Chỗ</Link></li>
+        <li><Link to="/home">Gia Hạn</Link></li>
+        <li><Link to="/home">Trả Phòng</Link></li>
+        <li><Link to="/home">Thanh Toán</Link></li>
+        <li><Link to="/NoiQuy">Nội Quy Ký túc xá</Link></li>
       </ul>
       <div className="user-menu">
         <button className="user-button" onClick={toggleDropdown}>
-          <img src="logo.jpg" alt="User Avatar" className="user-avatar" />
-          <span className="username">Tên Người Dùng</span>
+          <img src="avatar.jpg" alt="User Avatar" className="user-avatar" />
+          <span className="username">Huỳnh Vĩ Khang</span>
           <svg
             className="dropdown-arrow"
             width="10"
@@ -55,9 +62,9 @@ const Navbar = () => {
         </button>
         {isDropdownOpen && (
           <div className="dropdown-menu">
-            <a href="#">Thông tin cá nhân</a>
-            <a href="#">Đổi mật khẩu</a>
-            <a href="#">Đăng xuất</a>
+            <Link to="/profile">Thông tin cá nhân</Link>
+            <Link to="/change-password">Đổi mật khẩu</Link>
+            <a href="#" onClick={handleLogout}>Đăng xuất</a>
           </div>
         )}
       </div>
